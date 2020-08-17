@@ -1,0 +1,71 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Air Flight Delay Prediction</title>
+
+    <!-- BootStrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <!-- css -->
+    <link rel="stylesheet" href="static/style.css">
+
+</head>
+<body>
+    <!-- As a heading -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/">Air Flight Delay Prediction</a>
+            </div>
+        </div>
+    </nav>
+    <br>
+    <h2>Let's Try to Predict </h2>
+    <br>
+    <img src="static\image3.jpg">    <img src="static\image4.png">
+    <br>
+    <br>
+    <p><b>Insert CSV file with the following features and download the result:</b></p>
+    <p><b>"MONTH,DAY,ORIGIN,DESTINATION,TAXI OUT,SCHEDULED TIME,TAXI IN,ARRIVAL DELAY,AIR SYSTEM DELAY,AIRLINE DELAY,LATE AIRCRAFT DELAY, 
+          WEATHER DELAY,DEPARTURE HOUR,DEPARTURE MIN,ARRIVAL HOUR,ARRIVAL MIN"</b>
+    </p>
+    <br>
+    <form action="/multiple" method="post">
+    	<div class="container" align="left">
+                <div class="vertical-left">
+                    <input type="file"  name="csvfile" value="">
+                </div>
+        </div>
+        <br>
+    	<div class="container" align="left">
+                <div class="vertical-center">
+                    <input type="submit" value="Submit" class="btn btn-primary">
+                </div>
+        </div>
+    </form>
+    <br>
+    <h3><i>{{ text }}</i></h3>
+    <br>
+    <div class="container" align="left">
+        <div class="vertical-center">
+            <a class="btn btn-primary" href="/download" role="button">Download Result</a>
+        </div>
+     </div>
+
+    <br>
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
